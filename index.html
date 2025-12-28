@@ -3,27 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sven Jonderko – IT Systemintegration</title>
-  <meta name="description" content="Vorname Nachname – Quereinstieg IT, Fokus Windows Server, Active Directory, PowerShell und IT-Security.">
+  <title>Sven Jonderko</title>
+  <meta name="description">
+
+  <style>
+    :root{
+      --bg: #0b1020;
+      --card: rgba(255,255,255,.07);
+      --border: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --shadow: 0 12px 35px rgba(0,0,0,.35);
+      --radius: 18px;
+      --accent: #7dd3fc;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg:#f6f7fb;
+        --card: rgba(10,20,40,.05);
+        --border: rgba(10,20,40,.14);
+        --text: rgba(10,20,40,.92);
+        --muted: rgba(10,20,40,.70);
+        --shadow: 0 12px 35px rgba(10,20,40,.12);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.6;
+      color: var(--text);
+      background:
+        radial-gradient(1100px 650px at 10% 0%, rgba(125,211,252,.22), transparent 55%),
+        radial-gradient(900px 520px at 95% 20%, rgba(167,139,250,.18), transparent 58%),
+        var(--bg);
+      padding: 42px 18px 60px;
+    }
+
+    .wrap{
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.09), var(--card));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      letter-spacing: .2px;
+      line-height: 1.15;
+    }
+
+    p{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    h2{
+      margin: 22px 0 10px;
+      font-size: 1.15rem;
+      letter-spacing: .2px;
+    }
+
+    ul{
+      margin: 8px 0 0 18px;
+      color: var(--muted);
+    }
+    li{ margin: 8px 0; }
+
+    a{
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    a:hover{
+      border-bottom-color: rgba(125,211,252,.55);
+    }
+
+    /* Links als Buttons */
+    .linklist{
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .linklist li{ margin: 0; }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      font-weight: 650;
+    }
+    .btn:hover{
+      background: rgba(255,255,255,.08);
+    }
+
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(125,211,252,.6);
+    }
+
+    footer{
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .95rem;
+      text-align: center;
+      opacity: .9;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Sven Jonderko</h1>
-  <p>
-    Ich bin angehender Fachinformatiker für Systemintegration mit Schwerpunkt Windows Server,
-    Active Directory, PowerShell und IT-Security.
-  </p>
+  <div class="wrap">
+    <div class="card">
+      <h1>name</h1>
+      <p>
+        Ich bin angehender Fachinformatiker für Systemintegration mit Schwerpunkt Windows Server,
+        Active Directory, PowerShell und IT-Security.
+      </p>
 
-  <h2>Kompetenzen</h2>
-  <ul>
-    <li>Windows Server / AD DS / DNS / DHCP</li>
-    <li>PowerShell-Automatisierung</li>
-    <li>IT-Security (CompTIA Security+)</li>
-  </ul>
+      <h2>Kompetenzen</h2>
+      <ul>
+        <li>Windows Server / AD DS / DNS / DHCP</li>
+        <li>PowerShell-Automatisierung</li>
+        <li>IT-Security (CompTIA Security+)</li>
+      </ul>
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="https://github.com/svenjonderko">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/sven-jonderko/">LinkedIn</a></li>
-  </ul>
+      <h2>Links</h2>
+      <ul class="linklist">
+        <li><a class="btn" href="https://github.com/DEIN_GITHUB_USERNAME" target="_blank" rel="noopener"><span class="dot"></span> GitHub</a></li>
+        <li><a class="btn" href="https://www.linkedin.com/in/DEIN_LINKEDIN" target="_blank" rel="noopener"><span class="dot"></span> LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <footer>
+      © <span id="y"></span> name
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
