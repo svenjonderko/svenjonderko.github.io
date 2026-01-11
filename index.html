@@ -19,15 +19,7 @@
       --accent: #7dd3fc;
     }
 
-    @media (prefers-color-scheme: light) {
-      :root{
-        --bg:#f6f7fb;
-        --card: rgba(10,20,40,.05);
-        --border: rgba(10,20,40,.14);
-        --text: rgba(10,20,40,.92);
-        --muted: rgba(10,20,40,.70);
-        --shadow: 0 12px 35px rgba(10,20,40,.12);
-      }
+    
     }
 
     * { box-sizing: border-box; }
@@ -137,19 +129,59 @@
   <div class="wrap">
     <div class="card">
       <h1>Sven Jonderko</h1>
+      
       <p>
-        Ich bin angehender Fachinformatiker für Systemintegration mit Schwerpunkt Windows Server,
-        Active Directory, PowerShell, Mobile Device Management und IT-Security.
+        Fachinformatiker für Systemintegration<br>
+        <strong>Schwerpunkte:</strong> Windows Server, Active Directory, PowerShell, Mobile Device Management und IT-Security.<br>
+        <strong>Zertifizierung:</strong> 
+<span style="display: inline-flex; align-items: center; gap: 8px;">
+  CompTIA Security+ (2024)
+  <a href="https://www.credly.com/badges/2670f5e8-e5b2-42e5-9bb0-40fd526fc7fc/public_url" target="_blank" title="Zertifikat prüfen" style="border:none;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+    </svg>
+  </a>
+</span>
       </p>
 
-      <h2>Kompetenzen</h2>
-      <ul>
-        <li>Windows Server / AD DS / DNS / DHCP</li>
-        <li>PowerShell-Automatisierung</li>
-        <li>IT-Security (CompTIA Security+)</li>
-      </ul>
+      <h2>Technische Kompetenzen</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div>
+          <h3 style="font-size: 1rem; color: var(--accent); margin-bottom: 5px;">Infrastructure & Services</h3>
+          <ul style="margin-top: 5px;">
+            <li>Active Directory (Benutzer/Gruppen/GPOs)</li>
+            <li>DNS / DHCP Services</li>
+            <li>Virtualisierung (VMware, Proxmox)</li>
+            <li>Netzwerktechnik & Troubleshooting</li>
+          </ul>
+        </div>
 
-      <h2>Links</h2>
+        <div>
+          <h3 style="font-size: 1rem; color: var(--accent); margin-bottom: 5px;">Automation & Security</h3>
+          <ul style="margin-top: 5px;">
+            <li>PowerShell-Automatisierung</li>
+            <li>IT-Security (CompTIA Security+)</li>
+            <li>Patch- und Update-Management</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1rem; color: var(--accent); margin-bottom: 5px;">Client Management</h3>
+          <ul style="margin-top: 5px;">
+            <li>Mobile Device Management (MDM)</li>
+            <li>Client- und Geräteverwaltung</li>
+            <li>Fehleranalyse & Support</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2670f5e8-e5b2-42e5-9bb0-40fd526fc7fc" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+      <h2 style="margin-top: 30px;">Links</h2>
       <ul class="linklist">
         <li><a class="btn" href="https://github.com/svenjonderko" target="_blank" rel="noopener"><span class="dot"></span> GitHub</a></li>
         <li><a class="btn" href="https://www.linkedin.com/in/sven-jonderko" target="_blank" rel="noopener"><span class="dot"></span> LinkedIn</a></li>
@@ -165,4 +197,3 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
